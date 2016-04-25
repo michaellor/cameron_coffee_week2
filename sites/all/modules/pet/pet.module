@@ -1,0 +1,20 @@
+<?php
+
+function pet_menu() {
+  $items = array();
+  $items['pet'] = array(
+    'title' => 'My Favorite Pet',
+    'page callback' => 'pet_info',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function pet_info() {
+  return '
+    <h3>Lava</h3>
+    <img src="/sites/all/modules/pet/image/pet.jpg"/><br>
+    <a href="https://en.wikipedia.org/wiki/Black_cat">Learn More about Black Cats</a>
+    ';
+}
