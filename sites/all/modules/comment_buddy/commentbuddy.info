@@ -1,0 +1,5 @@
+name = Comment Buddy
+description = Display messages to the user when a comment is created, deleted, or edited.
+package = My Custom Menu Item
+core = 7.x
+files[] = commentbuddy.module
