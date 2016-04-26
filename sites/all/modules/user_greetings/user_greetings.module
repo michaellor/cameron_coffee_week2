@@ -1,0 +1,45 @@
+<?php
+    // function user_greetings_menu (){
+    //     $items = array();
+    //     $items['welcome'] = array(
+    //       'page callback' => 'welcome_user',
+    //       "access callback" => TRUE,
+    //       "type" => MENU_CALLBACK,
+    //     );
+    //     $items['goodbye'] = array(
+    //       "title" => "Good bye",
+    //       'page callback' => 'bye_user',
+    //       "access callback" => TRUE,
+    //       "type" => MENU_CALLBACK,
+    //     );
+    //     return $items;
+    // }
+
+    function user_greetings_user_login (&$edit, $account){
+        $_GET['destination'] = '<front>';
+        setcookie('my_message', '', time() - 3600);
+        if(in_array('administrator', $account->roles)) {
+          return drupal_set_message("Welcome Admin");
+        } elseif (in_array('moderator', $account->roles)) {
+
+          return drupal_set_message("Welcome Mod");
+        } elseif (in_array('VIP', $account->roles)) {
+
+          return drupal_set_message("Welcome VIP");
+        } else {
+
+          return drupal_set_message("Welcome");
+        }
+    }
+
+    function user_greetings_user_logout($account){
+      setcookie('my_message', t("Goodbye, have a nice evening!"), time() + (86400 * 30), "/");
+       drupal_set_message($_COOKIE['my_message']);
+    }
+
+    function user_greetings_init() {
+        if(!empty($_COOKIE['my_message'])) {
+          drupal_set_message($_COOKIE['my_message']);
+          setcookie('my_message', '', time() - 3600);
+        }
+    }
