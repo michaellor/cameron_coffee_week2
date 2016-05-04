@@ -1,0 +1,15 @@
+#specials {
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#sidebar-first {
+  background-color: grey;
+  float: left;
+}
+
+#sidebar-second {
+  background-color: tan;
+  float: right;
+}
