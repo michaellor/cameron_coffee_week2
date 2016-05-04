@@ -113,6 +113,7 @@
         <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
       </div></div> <!-- /.section, /#navigation -->
     <?php endif; ?>
+    <br>
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
@@ -121,6 +122,24 @@
     <?php print $messages; ?>
 
     <div id="main-wrapper"><div id="main" class="clearfix">
+
+      <div id="specials" class="custom-class">
+        <?php print render($page['specials']); ?>
+      </div>
+      <br>
+
+      <?php if ($page['sidebar_first']): ?>
+        <div id="sidebar-first" class="column sidebar"><div class="section">
+          <?php print render($page['sidebar_first']); ?>
+        </div></div> <!-- /.section, /#sidebar-first -->
+      <?php endif; ?>
+      <br>
+
+      <?php if ($page['sidebar_second']): ?>
+        <div id="sidebar-second" class="column sidebar"><div class="section">
+          <?php print render($page['sidebar_second']); ?>
+        </div></div> <!-- /.section, /#sidebar-second -->
+      <?php endif; ?>
 
       <div id="content" class="column"><div class="section">
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
@@ -135,22 +154,8 @@
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
 
 
-      <?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_second']); ?>
-        </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
-
-      <div id="specials" class="custom-class">
-        <?php print render($page['specials']); ?>
-      </div>
 
     </div></div> <!-- /#main, /#main-wrapper -->
 

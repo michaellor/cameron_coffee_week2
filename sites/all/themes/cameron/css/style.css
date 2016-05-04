@@ -1,15 +1,33 @@
 #specials {
-  background-color: red;
+  background-color: tan;
   padding: 20px;
   border-radius: 10px;
 }
 
 #sidebar-first {
-  background-color: grey;
-  float: left;
+  background-color: tan;
+  /*float: left;*/
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #sidebar-second {
   background-color: tan;
-  float: right;
+  /*float: right;*/
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#main-wrapper {
+  column-count: 3;
+}
+
+#navigation {
+  background-color: grey;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #EAE0D5;
 }
