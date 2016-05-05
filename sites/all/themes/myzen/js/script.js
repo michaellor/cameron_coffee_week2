@@ -16,8 +16,9 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
-
-    // Place your code here.
+    $('#price').click(function() {
+      $(".coffee_list_field_price").toggleClass('red_text');
+    });
 
   }
 };

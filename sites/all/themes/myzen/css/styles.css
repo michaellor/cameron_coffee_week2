@@ -65,3 +65,7 @@ p {
   margin-right: 5px;
   margin-top: 10px;
 }
+
+.red_text {
+  color: red;
+}
