@@ -56,3 +56,16 @@ p {
   padding: 10px;
   border-radius: 10px;
 }
+
+#block-views-coffee-gallery-block-1 img {
+  height: 150px;
+  width: auto;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.views-field-title {
+  text-align: center;
+}
